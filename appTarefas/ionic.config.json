@@ -1,0 +1,7 @@
+{
+  "name": "appTarefas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
