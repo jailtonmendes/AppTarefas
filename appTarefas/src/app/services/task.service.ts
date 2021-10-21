@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class testeTask {
+export class TaskService {
 
   private tasks: Task[] = [];
 
@@ -13,8 +13,11 @@ export class testeTask {
     return this.tasks
   }
 
-  public addTask() {
-
+  public addTask(value: string, date: string) {
+    date = date.replace("-", "/");
+    let task : Task = {value: value, date: new Date(date), done: false };
+    this.tasks.push(task);
+    console.log(this.tasks)
   }
 
   public delTask() {
@@ -27,8 +30,8 @@ export class testeTask {
 
 }
 
-// interface Task {
-//   value: string;
-//   date: Date;
-//   done?: boolean;
-// }
+interface Task {
+  value: string;
+  date: Date;
+  done?: boolean;
+}
