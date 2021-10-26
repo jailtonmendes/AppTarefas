@@ -150,5 +150,9 @@ export class HomePage {
     console.log('onDidDismiss resolved with role', role);
   }
 
+  cally(ph) {
+    window.open('https://api.whatsapp.com/send?phone=' + ph);
+  }
+
 }
 
